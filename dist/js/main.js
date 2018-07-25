@@ -119,7 +119,6 @@
     exports.Employe = Employe;
 });
 
-
 var link = document.getElementById('popup');
 var popup = document.getElementById('myModal');
 var close_block = document.getElementById('close_block');
@@ -134,9 +133,10 @@ close_block.addEventListener('click', function() {
 
 //I'm using "click" but it works with any event
 document.addEventListener('click', function(event) {
-	var isClickInside1 = popup.contains(event.target);
-	var isClickInside2 = link.contains(event.target);
-	if (!isClickInside1 && !isClickInside2) {
-		popup.classList.remove('show');
-	}
+    var isClickInside1 = popup.contains(event.target);
+    var isClickInside2 = link.contains(event.target);
+    if (!isClickInside1 && !isClickInside2) {
+        popup.classList.remove('show');
+    }
 });
+
