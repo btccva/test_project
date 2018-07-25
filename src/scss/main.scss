@@ -1,14 +1,62 @@
 @import "variables";
 
 
-div {
-  color: $color;
-  background: $bg_color;
-  width: $box-width;
-  min-height: $box-width * 0.6;
-  padding: 40px;
-  margin: 20px auto;
-  border: 2px solid black;
-  font-size: 4em;
+.popup {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  background-color: blue;
   text-align: center;
+}
+
+.modal {
+  visibility: hidden;
+  padding: 80px 100px;
+  position: absolute;
+  transform: translateX(80%) translateY(50%);
+  text-align: center;
+  background-color: lightgoldenrodyellow;
+  border-radius: 30px;
+}
+
+.show {
+  visibility: visible;
+}
+
+.modal span {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 0;
+}
+
+.modal .close::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 20px;
+  background-color: blue;
+  transform: rotate(45deg);
+}
+
+.modal .close::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 20px;
+  background-color: blue;
+  transform: rotate(-45deg);
 }

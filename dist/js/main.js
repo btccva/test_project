@@ -118,3 +118,25 @@
     exports.Person = Person;
     exports.Employe = Employe;
 });
+
+
+var link = document.getElementById('popup');
+var popup = document.getElementById('myModal');
+var close_block = document.getElementById('close_block');
+
+link.addEventListener('click', function() {
+    popup.classList.add('show');
+});
+
+close_block.addEventListener('click', function() {
+    popup.classList.remove('show');
+});
+
+//I'm using "click" but it works with any event
+document.addEventListener('click', function(event) {
+	var isClickInside1 = popup.contains(event.target);
+	var isClickInside2 = link.contains(event.target);
+	if (!isClickInside1 && !isClickInside2) {
+		popup.classList.remove('show');
+	}
+});
