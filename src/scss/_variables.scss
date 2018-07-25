@@ -2,3 +2,9 @@ $color : darken(#590, 25%);
 $bg_color : lighten(#C6A, 30%);
 
 $box-width : 450px;
+
+@mixin pseudo-elem($content: '', $display: block, $pos: absolute) {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
