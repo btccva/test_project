@@ -131,7 +131,6 @@ close_block.addEventListener('click', function() {
     popup.classList.remove('show');
 });
 
-//I'm using "click" but it works with any event
 document.addEventListener('click', function(event) {
     var isClickInside1 = popup.contains(event.target);
     var isClickInside2 = link.contains(event.target);
